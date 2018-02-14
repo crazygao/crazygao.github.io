@@ -9,10 +9,6 @@
 				background-color: #ffffff;
 				margin: 0px;
 				overflow: hidden;
-				font-family:Monospace;
-				font-size:13px;
-				text-align:center;
-				text-align:center;
 				cursor: pointer;
 			}
 
@@ -25,22 +21,40 @@
 				position: absolute;
 				top: 10px;
 				width: 100%;
+				height: 300px;
+				writing-mode: vertical-rl;
+				text-align: left;
+				font-size: 12pt;
 			}
 
-			#info2 {
+			.info2 {
 				color: #00aeff
+			}
+
+			.bigger {
+				font-size: 15pt;
+			}
+
+			.title {
+				background-color: #ffffff;
+				margin: 0px;
+				overflow: hidden;
+				cursor: pointer;
+				position: absolute;
+				text-align: center;
+				font-family: Arial, Helvetica, sans-serif;
+				size: 30px
 			}
 
 		</style>
 	</head>
 	<body>
-
 		<div id="info">
-			情人节快乐<br/>
-			你可以选择 <span id="options"></span> 纸鹤，一共<span id="birds"></span>纸鹤<br/>
-			<span id="info2">—— 一直都告诫自己：太动心则失人之察<br/>
-			—— 后来在绘着纸鹤的时候，我就知道……这就是骗自己的……<br/></span>
-			触摸屏幕，纸鹤也会散开，然后会聚。
+			<br/>
+			<span class="info2">—— 一直都告诫自己：<span class="bigger">太动心</span>则失人之察<br/><br/>
+			—— 后来在一笔笔绘着纸鹤的时候，我就知道……这就是<span class="bigger">骗自己的……</span><br/></span>
+			
+			<br/>
 		</div>
 
 		<script>
@@ -1720,7 +1734,7 @@ function getPassThroughFragmentShader() {
 
 			var BOUNDS = 800, BOUNDS_HALF = BOUNDS / 2;
 
-			document.getElementById('birds').innerText = BIRDS;
+			//document.getElementById('birds').innerText = BIRDS;
 
 			function change(n) {
 				location.hash = n;
@@ -1729,12 +1743,12 @@ function getPassThroughFragmentShader() {
 			}
 
 
-			var options = '';
+			/*var options = '';
 			for (i=3; i<6; i++) {
 				var j = Math.pow(2, i);
 				options += '<a href="#" onclick="return change(' + j + ')">' + (j * j) + '</a> ';
 			}
-			document.getElementById('options').innerHTML = options;
+			document.getElementById('options').innerHTML = options;*/
 
 			var last = performance.now();
 
